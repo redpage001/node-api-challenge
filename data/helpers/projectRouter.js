@@ -173,7 +173,7 @@ function  validateAction(req, res, next) {
     const { description, notes } = req.body;
 
     if(Object.entries(req.body).length === 0){
-        res.status(400).json({ message: "No project data was found." })
+        res.status(400).json({ message: "No action data was found." })
     } else if (!description || !notes ){
         res.status(400).json({ message: "Description and Notes fields are required." })
     } else if(description.length > 128){
